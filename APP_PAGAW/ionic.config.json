@@ -1,0 +1,8 @@
+{
+  "name": "APP_PAGAW",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
