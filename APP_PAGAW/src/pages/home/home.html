@@ -8,6 +8,19 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+     <ion-item *ngFor="let parameter of parameters">
+
+       <h2>{{ parameter.ruta_absoluta_Spruebas}}</h2>
+       <p>{{ parameter.cantidad_registros }}</p>
+       <p>{{ parameter.ruta_absoluta_Sproduccion }}</p>
+       <p>{{ parameter.ruta_absoluta_Sarchivos }}</p>
+       <p>{{ parameter.cuenta_correo }}</p>
+       <p>{{ parameter.contrasena }}</p>
+
+     </ion-item>
+   </ion-list>
+
   <h3>Ionic Menu Starter</h3>
 
   <p>
@@ -15,4 +28,5 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
 </ion-content>
