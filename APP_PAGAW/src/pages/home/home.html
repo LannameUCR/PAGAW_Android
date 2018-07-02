@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="ucr">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -8,25 +8,41 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-     <ion-item *ngFor="let parameter of parameters">
+  <ion-refresher (ionRefresh)="recargar($event)">
+      <ion-refresher-content></ion-refresher-content>
+     </ion-refresher>
+   <ion-list>
+  <h3>PAGAW</h3>
+      <ion-list-header>Parametros de Configuración</ion-list-header>
+      <ion-icon name="ios-build" danger item-left></ion-icon>
 
-       <h2>{{ parameter.ruta_absoluta_Spruebas}}</h2>
-       <p>{{ parameter.cantidad_registros }}</p>
-       <p>{{ parameter.ruta_absoluta_Sproduccion }}</p>
-       <p>{{ parameter.ruta_absoluta_Sarchivos }}</p>
-       <p>{{ parameter.cuenta_correo }}</p>
-       <p>{{ parameter.contrasena }}</p>
+      <ion-item-sliding *ngFor="let parameter of parameters">
+        <ion-item>
+          <h2 color="primary">Ruta Pruebas:</h2>
+          <p>{{parameter.ruta_absoluta_Spruebas}}</p>
+          <h2 color="primary">Ruta Produción:</h2>
+          <p> {{parameter.ruta_absoluta_Sproduccion}}</p>
+          <h2 color="primary">Cantidad de Registros:</h2>
+          <p>{{parameter.cantidad_registros}}</p>
+          <h2 color="primary">Ruta de Archivos: </h2>
+          <p>{{parameter.ruta_absoluta_Sarchivos}}</p>
+          <h2 color="primary">Correo:</h2>
+          <p>{{parameter.cuenta_correo}}</p>
+          <h2 color="primary">Contraseña:</h2>
+          <p>{{parameter.contrasena}}</p>
 
-     </ion-item>
-   </ion-list>
-
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color="primary" icon-left (click)="editParameter(parameter)">
+            <ion-icon name="ios-create"></ion-icon>
+            Editar
+          </button>
+          <button ion-button color="secondary" icon-left (click)="restartPArameter(parameter)">
+            <ion-icon name="ios-cog"></ion-icon>
+            Restablecer
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
 
 </ion-content>
