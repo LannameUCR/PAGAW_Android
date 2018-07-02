@@ -1,0 +1,38 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>  
+  <form [formGroup]="logginForm" (ngSubmit)="validateLoggin()">
+    <ion-col text-center>
+        <ion-row center>  
+          <ion-col text-center style="padding-left: 20%;">
+              <ion-img width="100%" height="90" src="assets/imgs/pagaw_negro.png" style="align-items: center; background: transparent"></ion-img>
+        </ion-col> 
+      </ion-row>    
+      
+      <h3>Ingresar al sistema</h3><br/>
+      <ion-label text-center for="userName">Nombre de usuario</ion-label>
+      <ion-input text-center type="text" formControlName="userName"  placeholder="Ingrese su nombre de usuario"></ion-input><br/>
+      <ion-label text-center for="userName">Contraseña</ion-label><br/>
+      <ion-input text-center type="password" formControlName="pwd" id="password" placeholder="Ingrese su contraseña"></ion-input><br/><br/>
+
+      <ion-row center>  
+          <ion-col text-center>
+            <button ion-button primary type="submit" >Ingresar</button>
+        </ion-col> 
+      </ion-row>
+    </ion-col>
+  </form>
+</ion-content>

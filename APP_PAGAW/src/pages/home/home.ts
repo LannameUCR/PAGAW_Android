@@ -9,9 +9,10 @@ import { ParameterServiceProvider } from '../../providers/parameter-service/para
 })
 export class HomePage {
  parameters: any[] = [];
-  constructor(public navCtrl: NavController,public parametrosServices:ParameterServiceProvider) {
-this.getParameters();
+  constructor(public navCtrl: NavController, public parametrosServices:ParameterServiceProvider) {
+    this.getParameters();
   }
+
   getParameters() {
       this.parametrosServices.getParameters()
       .then(data => {
