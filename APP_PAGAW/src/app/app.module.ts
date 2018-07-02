@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { EditParametersPage } from '../pages/edit-parameters/edit-parameters';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +18,8 @@ import { ParameterServiceProvider } from '../providers/parameter-service/paramet
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+EditParametersPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { ParameterServiceProvider } from '../providers/parameter-service/paramet
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+EditParametersPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the EditParametersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="ucr">
+     <ion-title>Editar Parametros</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+     <ion-list-header>Parametros de Configuración PAGAW</ion-list-header>
+  <ion-item>
+    <ion-label stacked>Ruta Pruebas</ion-label>
+    <ion-input  type="text" [(ngModel)]="rutaPR"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Ruta Producción</ion-label>
+    <ion-input [(ngModel)]="rutaProduccion"   type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Ruta Archivo</ion-label>
+    <ion-input [(ngModel)]="rutaArchivo"type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Cantidad Registros</ion-label>
+    <ion-input  [(ngModel)]="registros" type="text"></ion-input>
+  </ion-item>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena"   type="text" ></ion-input>
+    </ion-item>
+  <button ion-button color="primary" (click)="editParameter()"><span >Guardar</span></button>
+</ion-content>
