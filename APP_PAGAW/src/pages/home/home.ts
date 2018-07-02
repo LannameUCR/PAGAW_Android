@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ParameterServiceProvider } from '../../providers/parameter-service/parameter-service';
-import { IonicPage, NavParams } from 'ionic-angular';
 import { EditParametersPage } from '../../pages/edit-parameters/edit-parameters';
 import {  LoadingController } from 'ionic-angular';
 import { Refresher, reorderArray }  from "ionic-angular";

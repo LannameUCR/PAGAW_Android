@@ -1,5 +1,5 @@
 {
-  "name": "APP_PAGAW",
+  "name": "pagaw",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -55,7 +55,7 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-x-toast": {},
-      "cordova-plugin-dialogs": {}      
+      "cordova-plugin-dialogs": {}
     },
     "platforms": [
       "android"
